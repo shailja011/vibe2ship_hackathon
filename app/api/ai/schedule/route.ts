@@ -20,9 +20,18 @@ Return ONLY a JSON array: [{"time":"9:00 AM","task":"...","duration":"30 min","t
       }],
     });
 
-    const text = (msg.content[0] as any).text.trim();
-    return NextResponse.json(JSON.parse(text));
-  } catch {
-    return NextResponse.json([]);
+    const rawText = (msg.content[0] as any).text.trim();
+    const cleaned = rawText.replace(/^```json\s*/i, "").replace(/^```\s*/,"").replace(/```\s*$/,"").trim();
+
+    try {
+      const parsed = JSON.parse(cleaned);
+      return NextResponse.json(parsed);
+    } catch (parseErr) {
+      console.error("AI Schedule JSON parse failed. Raw text was:", rawText);
+      return NextResponse.json([], { status: 200 });
+    }
+  } catch (e:any) {
+    console.error("AI Schedule API error:", e?.message || e);
+    return NextResponse.json([], { status: 200 });
   }
 }

@@ -1,7 +1,5 @@
 {
-  "/api/ai/prioritize/route": "app/api/ai/prioritize/route.js",
-  "/auth/login/page": "app/auth/login/page.js",
-  "/api/ai/insights/route": "app/api/ai/insights/route.js",
-  "/api/ai/schedule/route": "app/api/ai/schedule/route.js",
-  "/dashboard/page": "app/dashboard/page.js"
+  "/page": "app/page.js",
+  "/dashboard/page": "app/dashboard/page.js",
+  "/api/ai/schedule/route": "app/api/ai/schedule/route.js"
 }

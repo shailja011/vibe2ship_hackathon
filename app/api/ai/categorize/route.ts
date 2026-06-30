@@ -21,8 +21,14 @@ ${description ? `Description: "${description}"` : ""}`,
       }],
     });
 
-    const text = (msg.content[0] as any).text.trim();
-    return NextResponse.json(JSON.parse(text));
+    const rawText = (msg.content[0] as any).text.trim();
+    const cleaned = rawText.replace(/^```json\s*/i, "").replace(/^```\s*/,"").replace(/```\s*$/,"").trim();
+    try {
+      return NextResponse.json(JSON.parse(cleaned));
+    } catch {
+      console.error("AI Categorize JSON parse failed. Raw text was:", rawText);
+      return NextResponse.json({ category:"Other", severity:"medium", suggestion:"Report to local municipal authority." });
+    }
   } catch {
     return NextResponse.json({ category:"Other", severity:"medium", suggestion:"Report to local municipal authority." });
   }
