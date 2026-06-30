@@ -1,0 +1,26 @@
+/*!*************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[3]!./app/globals.css ***!
+  \*************************************************************************************************************************************************************************************************************************************************************/
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%;background:#080C14;color:#F8FAFC;font-family:'Inter',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+::-webkit-scrollbar{width:5px}
+::-webkit-scrollbar-track{background:#0F1520}
+::-webkit-scrollbar-thumb{background:#1A2840;border-radius:3px}
+:focus-visible{outline:2px solid #7C3AED;outline-offset:2px}
+input,textarea,select,button{font-family:inherit}
+button{cursor:pointer}
+@keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+@keyframes slideUp{from{transform:translateY(100%);opacity:0}to{transform:translateY(0);opacity:1}}
+.fade-up{animation:fadeUp .35s ease both}
+.fade-in{animation:fadeIn .25s ease both}
+.slide-up{animation:slideUp .3s ease both}
+.spinner{display:inline-block;width:18px;height:18px;border:2px solid rgba(255,255,255,.2);border-top-color:#fff;border-radius:50%;animation:spin .7s linear infinite}
+.leaflet-container{background:#080C14!important;font-family:inherit!important}
+.leaflet-popup-content-wrapper{background:#162032!important;border:1px solid #1A2840!important;border-radius:10px!important}
+.leaflet-popup-tip{background:#162032!important}
+.leaflet-popup-content{margin:12px 14px!important;color:#fff!important}
+.leaflet-control-zoom a{background:#162032!important;color:#94A3B8!important;border-color:#1A2840!important}
+
