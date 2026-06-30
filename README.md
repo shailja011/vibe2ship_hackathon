@@ -31,6 +31,17 @@ To run the project locally, follow these steps:
 
 6. Open `http://localhost:3000` and register an account to get started.
 
+
+
+Tech Stack
+Next.js 14, TypeScript, Supabase (Postgres, Auth, Realtime, Storage), 
+Claude (Anthropic API), Leaflet for mapping.
+
+Links
+GitHub: https://github.com/shailja011/vibe2ship_hackathon.git
+Live demo: vibe2ship-hackathon-as35.vercel.app
+
+
 > Note: I built this for a hackathon, so I kept the setup lightweight — no Docker, no complex CI, just Next.js + Supabase + Claude AI working together.
 
 
